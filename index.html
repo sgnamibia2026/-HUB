@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SG HUB - Marketplace For All</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#0b1220;color:#fff;transition:.3s}
+body.light{background:#f5f7fb;color:#111}
+.floating{position:fixed;inset:0;overflow:hidden;z-index:-1}
+.floating span{position:absolute;width:120px;height:120px;background:rgba(244,180,0,.12);border-radius:50%;animation:float 18s infinite}
+@keyframes float{from{transform:translateY(100vh)}to{transform:translateY(-120px)}}
+.nav{position:sticky;top:0;padding:15px 5%;display:flex;justify-content:space-between;background:rgba(255,255,255,.08);backdrop-filter:blur(20px)}
+.logo{font-weight:800;color:#f4b400;font-size:28px}
+.hero{text-align:center;padding:120px 20px}
+.hero h1{font-size:3rem}
+.glass{background:rgba(255,255,255,.08);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.12);border-radius:20px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;padding:30px 5%}
+.stat{padding:25px;text-align:center}
+.search{width:90%;max-width:900px;padding:15px;border-radius:30px;border:none;margin:20px auto;display:block}
+.filters{text-align:center;padding:10px}
+.filters button,.btn{padding:10px 18px;border:none;border-radius:25px;margin:5px;cursor:pointer;background:#f4b400}
+.slider{display:flex;overflow:auto;gap:15px;padding:20px 5%}
+.card{min-width:300px;padding:15px}
+.card img{width:100%;height:180px;object-fit:cover;border-radius:12px}
+.badge{background:#f4b400;color:#000;padding:4px 10px;border-radius:15px;font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;padding:20px 5%}
+.footer{padding:40px;text-align:center;background:#050814}
+.sidebar{display:none}
+@media(max-width:768px){.hero h1{font-size:2rem}.sidebar{display:block}}
+</style>
+</head>
+<body>
+<div class="floating">
+<span style="left:10%"></span><span style="left:50%"></span><span style="left:80%"></span>
+</div>
+
+<nav class="nav">
+<div class="logo">SG HUB</div>
+<div>Marketplace For All</div>
+<button class="btn" onclick="document.body.classList.toggle('light')">🌙/☀️</button>
+</nav>
+
+<section class="hero">
+<h1>Buy • Sell • Services</h1>
+<p>Marketplace For All</p>
+<input class="search glass" placeholder="Advanced Search Products, Services, Sellers...">
+</section>
+
+<section class="stats">
+<div class="stat glass"><h2>5K+</h2><p>Listings</p></div>
+<div class="stat glass"><h2>1.2K+</h2><p>Sellers</p></div>
+<div class="stat glass"><h2>15K+</h2><p>Users</p></div>
+<div class="stat glass"><h2>250+</h2><p>Services</p></div>
+</section>
+
+<div class="filters">
+<button>All</button>
+<button>Electronics</button>
+<button>Vehicles</button>
+<button>Property</button>
+<button>Services</button>
+</div>
+
+<h2 style="padding:20px 5%">⭐ Featured Listings</h2>
+<div class="slider">
+<div class="card glass">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+<h3>iPhone 15</h3>
+<span class="badge">Premium</span>
+<p>📍 Windhoek</p>
+<p>✔ Verified Seller</p>
+<button class="btn">WhatsApp Seller</button>
+</div>
+
+<div class="card glass">
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7">
+<h3>Toyota Corolla</h3>
+<span class="badge">Featured</span>
+<p>📍 Namibia</p>
+<p>✔ Verified Seller</p>
+<button class="btn">WhatsApp Seller</button>
+</div>
+</div>
+
+<h2 style="padding:20px 5%">🛠 Services</h2>
+<div class="grid">
+<div class="card glass">
+<h3>Website Development</h3>
+<p>Book professional websites.</p>
+<button class="btn">Book Service</button>
+</div>
+<div class="card glass">
+<h3>Graphic Design</h3>
+<p>Logos, posters & branding.</p>
+<button class="btn">Book Service</button>
+</div>
+</div>
+
+<h2 style="padding:20px 5%">👤 Seller Profiles</h2>
+<div class="grid">
+<div class="card glass">
+<h3>John Trading ✔</h3>
+<p>Verified Seller</p>
+<p>📍 Windhoek</p>
+<button class="btn">WhatsApp</button>
+</div>
+</div>
+
+<footer class="footer">
+<h2>SG HUB</h2>
+<p>Marketplace For All</p>
+<p>Buy • Sell • Services • Connect</p>
+</footer>
+</body>
+</html>
